@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function ListItem({ item }) {
   const code = item.currency_code;
   const length = item.title.length;
@@ -31,5 +33,9 @@ function ListItem({ item }) {
     </div>
   );
 }
+
+ListItem.propTypes = {
+  item: PropTypes.object,
+};
 
 export default ListItem;
